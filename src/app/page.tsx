@@ -1,95 +1,76 @@
-import Image from 'next/image'
-import styles from './page.module.css'
+import styles from "./page.module.css";
+
+import Image from "next/image";
+
+// images
+import heroLeftImage from "../../assets/hero-left.png";
+import heroRightImage from "../../assets/hero-right.png";
+import githubIcon from "../../assets/mdi_github.svg";
+import linkedinIcon from "../../assets/mdi_linkedin.svg";
+import upworkIcon from "../../assets/bxl_upwork.svg";
+
+import Button from "@/components/button/Button";
+import Link from "next/link";
+
+const icons = [
+  {
+    href: "",
+    src: githubIcon,
+    alt: "github",
+  },
+  {
+    href: "",
+    src: linkedinIcon,
+    alt: "linkedin",
+  },
+  {
+    href: "",
+    src: upworkIcon,
+    alt: "upwork",
+  },
+];
 
 export default function Home() {
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>src/app/page.tsx</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <section id={styles.hero}>
+      <Image
+        src={heroLeftImage}
+        className={styles.hero__left__img}
+        alt="blurry lines image"
+      />
+      <Image
+        src={heroRightImage}
+        className={styles.hero__right__img}
+        alt="blurry lines image"
+      />
+      <div className="container">
+        <div className={styles.hero__text}>
+          <h1 className={styles.heading}>
+            Hi, my name is Ujjwal, and I develop creative web experiences for
+            brands and businesses across the globe.
+          </h1>
+          <p className={styles.hero__para}>
+            I started my computer science journey back in 2020 and since then I
+            am tinkering with web and always learning new technologies that I’ve
+            stumbled upon. I currently work as a lead developer at Pallavi
+            Nopany Design Studio based in Banglore, India. I’ve worked in a Web3
+            Defi company as well which was based in California, USA. And have
+            been freelancing since 2020 on Upwork.
+          </p>
+          <div className={styles.hero__cta}>
+            <Button href="mailto:contact@ujjwalsharma.dev">
+              contact@ujjwalsharma.dev
+            </Button>
+            <div className={styles.socials__div}>
+              {icons.map((icon) => (
+                <Link href={icon.href} target="_blank">
+                  <Image className={styles.socials__icon} src={icon.src} alt={icon.alt} />
+                </Link>
+              ))}
+            </div>
+          </div>
         </div>
       </div>
-
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore the Next.js 13 playground.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
-  )
+    </section>
+  );
 }

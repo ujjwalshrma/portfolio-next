@@ -1,0 +1,50 @@
+.button {
+  padding: 1px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--text);
+  border-radius: 8rem;
+  overflow: hidden;
+  background: var(--gradient);
+  background-size: 500% auto;
+  animation: textGradient 10s ease-in-out infinite alternate;
+}
+
+.button__text {
+  background: var(--gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-fill-color: trasparent;
+  background-clip: text;
+  background-size: 500% auto;
+  animation: textGradient 10s ease-in-out infinite alternate;
+  transition: all 0.3s ease;
+}
+
+.button:hover .inner__button {
+  background: var(--gradient);
+  background-size: 500% auto;
+  animation: textGradient 10s ease-in-out infinite alternate;
+}
+
+.button:hover .button__text {
+  color: var(--text);
+  -webkit-text-fill-color: var(--bg);
+}
+
+@keyframes textGradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
+.inner__button {
+  background: var(--bg);
+  padding: 1rem 2rem;
+  border-radius: 8rem;
+  transition: all 0.3s ease;
+}

@@ -13,12 +13,12 @@ function ProjectSection() {
   const [hoveredImgId, setHoveredImgId] = useState<number>(NaN);
 
   const handleMouseEnter = (id: number) => {
-    setHoveredImgId(id)
+    setHoveredImgId(id);
   };
 
   const handleMouseLeave = () => {
-    setHoveredImgId(NaN)
-  }
+    setHoveredImgId(NaN);
+  };
 
   return (
     <section id="projects" className={styles.projects}>
@@ -29,7 +29,7 @@ function ProjectSection() {
               <div>
                 <Image
                   className={
-                    project.id === hoveredImgId || window.innerWidth < 768
+                    project.id === hoveredImgId
                       ? `${styles.project__img} ${styles.hover}`
                       : styles.project__img
                   }

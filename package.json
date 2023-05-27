@@ -1,5 +1,6 @@
 {
   "name": "portfolio-next",
+  "description": "Portfolio website built with Next.js + Framer Motion",
   "version": "0.1.0",
   "private": true,
   "scripts": {

@@ -62,9 +62,13 @@ export default function Home() {
               contact@ujjwalsharma.dev
             </Button>
             <div className={styles.socials__div}>
-              {icons.map((icon) => (
-                <Link href={icon.href} target="_blank">
-                  <Image className={styles.socials__icon} src={icon.src} alt={icon.alt} />
+              {icons.map((icon, idx) => (
+                <Link key={idx} href={icon.href} target="_blank">
+                  <Image
+                    className={styles.socials__icon}
+                    src={icon.src}
+                    alt={icon.alt}
+                  />
                 </Link>
               ))}
             </div>

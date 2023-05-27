@@ -48,3 +48,9 @@
   border-radius: 8rem;
   transition: all 0.3s ease;
 }
+
+@media screen and (max-width: 390px) {
+  .inner__button {
+    padding: 0.7rem 1.5rem;
+  }
+}

@@ -56,11 +56,16 @@ h2 {
 }
 
 nav {
-  margin-top: 2.5rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
+  z-index: 999;
+  background: rgba(17, 17, 17, 0.3);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .nav-container {
@@ -88,9 +93,14 @@ nav {
     line-height: 2.8rem;
     letter-spacing: -0.03em;
   }
-  
+
   a {
     font-size: 1.5rem;
+  }
+
+  nav {
+    padding-top: 1.2rem;
+    padding-bottom: 1.2rem;
   }
 
   .container {

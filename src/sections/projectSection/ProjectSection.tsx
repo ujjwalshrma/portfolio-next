@@ -41,6 +41,11 @@ function ProjectSection() {
                 <div>
                   <h2 className={styles.title}>{project.title}</h2>
                   <p className={styles.description}>{project.description}</p>
+                  <div className={styles.techs}>
+                    {project.techStack.map((tech, idx) => (
+                      <span className={styles.tech__pill} key={idx}>{tech}</span>
+                    ))}
+                  </div>
                 </div>
                 <div
                   onMouseEnter={() => handleMouseEnter(project.id)}

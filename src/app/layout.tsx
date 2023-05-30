@@ -1,7 +1,11 @@
-import Link from "next/link";
+"use client";
+
 import "./globals.css";
 
+import { AnimatePresence } from "framer-motion";
+
 import localfont from "next/font/local";
+import Link from "next/link";
 
 const grotta = localfont({
   src: [
@@ -34,7 +38,7 @@ export default function RootLayout({
         <nav>
           <div className="container">
             <div className="nav-container">
-              <Link href='/'>U. Sharma</Link>
+              <Link href="/">U. Sharma</Link>
               <p className="menu-btn">Menu</p>
             </div>
           </div>

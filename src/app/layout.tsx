@@ -1,8 +1,4 @@
-"use client";
-
 import "./globals.css";
-
-import { AnimatePresence } from "framer-motion";
 
 import localfont from "next/font/local";
 import Link from "next/link";

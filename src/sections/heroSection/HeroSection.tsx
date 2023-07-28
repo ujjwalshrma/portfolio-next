@@ -3,8 +3,6 @@ import styles from "./HeroSection.module.css";
 import Image from "next/image";
 
 // images
-import heroLeftImage from "../../../assets/hero-left.png";
-import heroRightImage from "../../../assets/hero-right.png";
 import githubIcon from "../../../assets/mdi_github.svg";
 import linkedinIcon from "../../../assets/mdi_linkedin.svg";
 import upworkIcon from "../../../assets/bxl_upwork.svg";
@@ -33,21 +31,11 @@ const icons = [
 export default function HeroSection() {
   return (
     <section id={styles.hero}>
-      <Image
-        src={heroLeftImage}
-        className={styles.hero__left__img}
-        alt="blurry lines image"
-      />
-      <Image
-        src={heroRightImage}
-        className={styles.hero__right__img}
-        alt="blurry lines image"
-      />
       <div className="container">
         <div className={styles.hero__text}>
           <h1 className={styles.heading}>
-            Hi, my name is Ujjwal, and I develop creative web experiences for
-            brands and businesses across the globe.
+            Hi 👋 my name is Ujjwal and I develop creative web experiences for
+            brands and businesses across the globe 🌏.
           </h1>
           <p className={styles.hero__para}>
             I started my computer science journey back in 2020 and since then I

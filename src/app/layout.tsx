@@ -35,7 +35,11 @@ export default function RootLayout({
           <div className="container">
             <div className="nav-container">
               <Link href="/">U. Sharma</Link>
-              <p className="menu-btn">Menu</p>
+              <div>
+                <Link href="/">Projects, </Link>
+                <Link href="/">About, </Link>
+                <Link href="/">Contact</Link>
+              </div>
             </div>
           </div>
         </nav>

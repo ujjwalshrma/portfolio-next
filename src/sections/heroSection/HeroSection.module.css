@@ -8,22 +8,6 @@
   line-height: 7rem;
   letter-spacing: -0.03em;
   text-align: center;
-  background: var(--gradient);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  text-fill-color: trasparent;
-  background-clip: text;
-  background-size: 500% auto;
-  animation: textGradient 10s ease-in-out infinite alternate;
-}
-
-@keyframes textGradient {
-  0% {
-    background-position: 0% 50%;
-  }
-  100% {
-    background-position: 100% 50%;
-  }
 }
 
 .hero__text {
@@ -71,6 +55,7 @@
 .socials__icon {
   width: 3rem;
   height: 3rem;
+  filter: invert(1);
 }
 
 @media screen and (max-width: 390px) {

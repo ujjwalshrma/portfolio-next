@@ -8,6 +8,7 @@ import { Projects } from "./Projects";
 
 import Image from "next/image";
 import Button from "@/components/button/Button";
+import TechPill from "@/components/techpill/TechPill";
 
 function ProjectSection() {
   const [hoveredImgId, setHoveredImgId] = useState<number>(NaN);
@@ -43,7 +44,7 @@ function ProjectSection() {
                   <p className={styles.description}>{project.description}</p>
                   <div className={styles.techs}>
                     {project.techStack.map((tech, idx) => (
-                      <span className={styles.tech__pill} key={idx}>{tech}</span>
+                      <TechPill tech={tech} id={idx} />
                     ))}
                   </div>
                 </div>
@@ -51,7 +52,11 @@ function ProjectSection() {
                   onMouseEnter={() => handleMouseEnter(project.id)}
                   onMouseLeave={() => handleMouseLeave()}
                 >
-                  <Button href={project.link}>View More</Button>
+                  <Button
+                    href={`/projects/${encodeURIComponent(project.slug)}`}
+                  >
+                    View More
+                  </Button>
                 </div>
               </div>
             </div>

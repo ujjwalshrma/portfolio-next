@@ -5,14 +5,16 @@ function Button({
   href,
   children,
   className,
+  target,
 }: {
   href: string;
   children: React.ReactNode;
   className?: string;
+  target?: string;
 }) {
   return (
     <div className={styles.button}>
-      <Link className={className} href={href}>
+      <Link className={className} href={href} target={target}>
         <div className={styles.inner__button}>
           <p className={styles.button__text}>{children}</p>
         </div>

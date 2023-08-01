@@ -33,7 +33,7 @@ export default function HeroSection() {
     <section id={styles.hero}>
       <div className="container">
         <div className={styles.hero__text}>
-          <h1 className={styles.heading}>
+          <h1 className={`${styles.heading} text-animation`}>
             Hi 👋 my name is Ujjwal and I develop creative web experiences for
             brands and businesses across the globe 🌏.
           </h1>

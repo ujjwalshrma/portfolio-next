@@ -3,19 +3,16 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: var(--text);
   border-radius: 8rem;
 }
 
 .button:hover .inner__button {
-  background: var(--gradient);
-  background-size: 500% auto;
-  animation: textGradient 10s ease-in-out infinite alternate;
+  background: var(--bg);
+  transition: 0.3s ease all;
 }
 
 .button:hover .button__text {
   color: var(--text);
-  -webkit-text-fill-color: var(--bg);
 }
 
 .inner__button {
@@ -23,6 +20,7 @@
   padding: 1rem 2rem;
   border-radius: 8rem;
   transition: all 0.3s ease;
+  border: 1px solid var(--text);
 }
 
 @media screen and (max-width: 390px) {

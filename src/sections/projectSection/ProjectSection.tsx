@@ -44,7 +44,7 @@ function ProjectSection() {
                   <p className={styles.description}>{project.description}</p>
                   <div className={styles.techs}>
                     {project.techStack.map((tech, idx) => (
-                      <TechPill tech={tech} id={idx} />
+                      <TechPill key={idx} tech={tech} id={idx} />
                     ))}
                   </div>
                 </div>

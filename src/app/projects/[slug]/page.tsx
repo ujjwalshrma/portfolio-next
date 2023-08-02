@@ -42,7 +42,7 @@ const ProjectDetail: FC<ProjectDetailProps> = ({ params }) => {
           <p>{project?.mentions}</p>
           <div className={styles.project__techpill__wrapper}>
             {project?.techStack.map((tech, idx) => (
-              <TechPill tech={tech} id={idx} />
+              <TechPill tech={tech} id={idx} key={idx} />
             ))}
           </div>
         </div>
